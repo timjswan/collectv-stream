@@ -1,14 +1,11 @@
 import React from 'react';
 import './App.css';
-import VideosView from "./views/videosView";
-
-const videosViewHelper = new VideosView();
+import VideosView from "./views/VideosView";
 
 function App() {
-    const videoElements = videosViewHelper.make();
   return (
     <div className="App">
-      {videoElements}
+      <VideosView />
     </div>
   );
 }
