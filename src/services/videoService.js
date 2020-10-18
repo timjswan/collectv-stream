@@ -18,7 +18,7 @@ export default class VideoService {
         return this;
     }
 
-    buildVideoDetails = () => {
+    attachIdsToVideoObjects = () => {
         return {
             id: `player${this.index + 1}`,
             url: this.url,
@@ -27,6 +27,6 @@ export default class VideoService {
     };
 
     make() {
-        return this.buildVideoDetails();
+        return this.attachIdsToVideoObjects();
     }
 };
