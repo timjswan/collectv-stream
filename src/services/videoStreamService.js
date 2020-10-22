@@ -1,5 +1,3 @@
-import {RES_HEIGHT, RES_WIDTH} from "../constants/videoRes";
-
 export default class VideoStreamService {
     sldpPlayer = null;
     url;
@@ -26,8 +24,8 @@ export default class VideoStreamService {
             initial_resolution: '1080p',
             buffering: 500,
             autoplay: true,
-            height: RES_HEIGHT,
-            width: RES_WIDTH
+            height: 'parent',
+            width: 'parent',
         });
     };
 
