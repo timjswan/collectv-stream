@@ -1,5 +1,5 @@
 import React, {useEffect, useState, useRef} from 'react';
-import {Button, Modal, Col} from "antd";
+import {Button, Modal} from "antd";
 import VideoStreamService from "../../services/videoStreamService";
 
 const VideoDiv = React.forwardRef((props, ref) => {
@@ -26,7 +26,7 @@ const Thumbnail = (props) => {
     }
 
     return (
-        <Col>
+        <>
             <Button onClick={() => showModal(true)}>{title}</Button>
             <Modal
                 title={title}
@@ -39,7 +39,7 @@ const Thumbnail = (props) => {
             >
                 <VideoDiv id={id} ref={videoDiv} />
             </Modal>
-        </Col>
+        </>
     );
 };
 
