@@ -1,8 +1,8 @@
 import React from 'react';
 import { mount } from 'enzyme';
-import App from '../App';
+import VideosView from '../views/VideosView';
 
 test('renders App', () => {
-  const wrapper = mount(<App />);
-  expect(wrapper.find('App')).toHaveLength(1);
+  const wrapper = mount(<VideosView />);
+  expect(wrapper.find('VideosView')).toHaveLength(1);
 });
