@@ -10,6 +10,31 @@ body {
   background: #000 !important;
 }
 
+#wrapper {
+  margin: 0 auto;
+  width: 75%;
+  max-width: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 1em;
+}
+
+.ant-btn {
+  background-color: #5e5e5e;
+  border-color: #e46e18;
+  border-width: .25em;
+  color: #FFF;
+  margin: 1em;
+  height: 4em;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+}
+
 .sldp_player_wrp {
   height: 100% !important;
 }
