@@ -2,7 +2,6 @@ import React from "react";
 import VideosController from "../../controllers/videosController";
 import Thumbnail from "../../components/Thumbnail";
 import videos from '../../videos';
-import {Image} from "antd";
 
 const VideosView = () => {
     const videoController = new VideosController();
@@ -17,7 +16,7 @@ const VideosView = () => {
                     )
                 })}
             </div>
-            <img className='logo' src={require('../../img/collectv.png')} />
+            <img alt="thecollectv" className='logo' src={require('../../img/collectv.png')} />
         </>
     );
 };
