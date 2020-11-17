@@ -1,11 +1,10 @@
 import React from "react";
 import VideosController from "../../controllers/videosController";
 import Thumbnail from "../../components/Thumbnail";
-import videos from '../../videos';
 
 const VideosView = () => {
     const videoController = new VideosController();
-    const videosWithId = videoController.setVideos(videos).make();
+    const videosWithId = videoController.setVideos(window.videos).make();
 
     return (
         <>

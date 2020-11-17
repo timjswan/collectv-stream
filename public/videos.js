@@ -1,4 +1,4 @@
-const videos = [
+var videos = [
     {
         "url": "wss://vd1.wmspanel.com/video_demo_without_ads/stream",
         "title": "Quad 1"
@@ -16,5 +16,3 @@ const videos = [
         "title": "Diary 2"
     },
 ];
-
-export default videos;
