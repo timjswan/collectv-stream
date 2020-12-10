@@ -11,6 +11,8 @@
     "enzyme-adapter-react-16": "^1.15.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-jw-player": "^1.19.1",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-test-renderer": "^16.13.1"
   },

@@ -1,6 +1,6 @@
 var videos = [
     {
-        "url": "wss://vd1.wmspanel.com/video_demo_without_ads/stream",
+        "url": "https://nimble.thecollectv.com/pip/quad1/playlist_dvr.m3u8",
         "title": "Quad 1"
     },
     {

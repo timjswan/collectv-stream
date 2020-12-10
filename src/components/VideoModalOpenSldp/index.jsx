@@ -6,7 +6,7 @@ const VideoDiv = React.forwardRef((props, ref) => {
     return <div ref={ref} id={props.id}></div>
 });
 
-const Thumbnail = (props) => {
+const VideoModalOpenSldp = (props) => {
     const { title, url, id } = props;
     const [visible, showModal] = useState(false);
     const videoDiv = useRef();
@@ -43,4 +43,4 @@ const Thumbnail = (props) => {
     );
 };
 
-export default Thumbnail;
+export default VideoModalOpenSldp;

@@ -1,22 +1,32 @@
 import React from "react";
-import VideosController from "../../controllers/videosController";
-import Thumbnail from "../../components/Thumbnail";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
+import VideoPanel from "../../components/VideoPanel";
 
 const VideosView = () => {
-    const videoController = new VideosController();
-    const videosWithId = videoController.setVideos(window.videos).make();
-
     return (
-        <>
+        <Router>
+            <nav>
+                <ul>
+                    <li>
+                        <Link to="/sldp">SLDP Player</Link>
+                    </li>
+                    <li>
+                        <Link to="/jw">JW Player</Link>
+                    </li>
+                </ul>
+            </nav>
             <div id="wrapper">
-                {videosWithId.map((video) => {
-                    return (
-                        <Thumbnail title={video.title} url={video.url} key={video.id} id={video.id} />
-                    )
-                })}
+                <Switch>
+                    <Route path="/:player" children={<VideoPanel />} />
+                </Switch>
             </div>
             <img alt="thecollectv" className='logo' src={require('../../img/collectv.png')} />
-        </>
+        </Router>
     );
 };
 
