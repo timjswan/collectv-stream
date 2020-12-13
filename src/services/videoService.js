@@ -1,10 +1,16 @@
 export default class VideoService {
-  url;
+  urlLive;
+  urlRewind;
   index;
   title;
 
-  setUrl = (url) => {
-    this.url = url;
+  setUrlLive = (urlLive) => {
+    this.urlLive = urlLive;
+    return this;
+  };
+
+  setUrlRewind = (urlRewind) => {
+    this.urlRewind = urlRewind;
     return this;
   };
 
@@ -21,7 +27,8 @@ export default class VideoService {
   attachIdsToVideoObjects = () => {
     return {
       id: `player${this.index + 1}`,
-      url: this.url,
+      url_live: this.urlLive,
+      url_rewind: this.urlRewind,
       title: this.title,
     };
   };

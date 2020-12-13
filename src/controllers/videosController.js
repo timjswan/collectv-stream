@@ -15,7 +15,12 @@ export default class VideosController {
 
   createVideosArray = () => {
     return this.videos.map((video, i) =>
-      this.videoService.setIndex(i).setUrl(video.url).setTitle(video.title).make()
+      this.videoService
+        .setIndex(i)
+        .setUrlLive(video.url_live)
+        .setUrlRewind(video.url_rewind)
+        .setTitle(video.title)
+        .make()
     );
   };
 
