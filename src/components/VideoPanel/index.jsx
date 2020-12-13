@@ -12,11 +12,16 @@ const VideoPanel = () => {
     <>
       {videosWithId.map((video) => {
         return player === 'sldp' ? (
-          <VideoModalOpenSldp title={video.title} url={video.url} key={video.id} id={video.id} />
+          <VideoModalOpenSldp
+            title={video.title}
+            url={video.url_live}
+            key={video.id}
+            id={video.id}
+          />
         ) : (
           <VideoModalOpenJWPlayer
             title={video.title}
-            url={video.url}
+            url={video.url_rewind}
             key={video.id}
             id={video.id}
           />
