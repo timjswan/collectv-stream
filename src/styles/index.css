@@ -2,9 +2,8 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #3f3f3f !important;
@@ -23,8 +22,8 @@ body {
 .ant-btn {
   background-color: #5e5e5e;
   border-color: #e46e18;
-  border-width: .25em;
-  color: #FFF;
+  border-width: 0.25em;
+  color: #fff;
   margin: 1em;
   height: 4em;
 }
