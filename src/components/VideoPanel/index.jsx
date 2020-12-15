@@ -1,13 +1,13 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import VideosController from '../../controllers/videosController';
 import VideoModalOpenSldp from '../VideoModalOpenSldp';
 import VideoModalOpenJWPlayer from '../VideoModalOpenJWPlayer';
-import { useParams } from 'react-router-dom';
+import {PlayerContext} from "../../contexts/PlayerContext";
 
 const VideoPanel = () => {
   const videoController = new VideosController();
   const videosWithId = videoController.setVideos(window.videos).make();
-  const { player } = useParams();
+  const {player} = useContext(PlayerContext);
 
   const returnPlayer = (video) => {
     if (!/live|rewind/.test(player)) {
