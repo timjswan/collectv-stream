@@ -7,16 +7,12 @@ const { Option } = Select;
 const VideosView = () => {
   const [player, setPlayer] = useState('live');
 
-  const handleChange = (player) => {
-    console.log(player);
-    setPlayer(player);
-  };
   return (
     <>
       <div id="wrapper">
         <VideoPanel player={player} />
       </div>
-      <Select defaultValue="live" onChange={handleChange}>
+      <Select defaultValue="live" onChange={setPlayer}>
         <Option value="live">Live Streams</Option>
         <Option value="rewind">Rewindable Streams</Option>
       </Select>
