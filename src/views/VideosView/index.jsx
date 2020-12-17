@@ -1,21 +1,27 @@
-import React, {useContext} from 'react';
+import React, { useState } from 'react';
 import VideoPanel from '../../components/VideoPanel';
 import { Select } from 'antd';
-import {PlayerContext, PlayerContextProvider} from "../../contexts/PlayerContext";
 
 const { Option } = Select;
 
 const VideosView = () => {
-    const {setPlayer} = useContext(PlayerContext);
+  const [player, setPlayer] = useState('live');
+
+  const handleChange = (player) => {
+    console.log(player);
+    setPlayer(player);
+  };
   return (
-    <PlayerContextProvider>
-        <Select defaultValue="live" style={{ width: 120 }} onChange={setPlayer}>
-            <Option value="live">Live Streams</Option>
-            <Option value="rewind">Rewindable Streams</Option>
-        </Select>
-        <VideoPanel />
+    <>
+      <div id="wrapper">
+        <VideoPanel player={player} />
+      </div>
+      <Select defaultValue="live" onChange={handleChange}>
+        <Option value="live">Live Streams</Option>
+        <Option value="rewind">Rewindable Streams</Option>
+      </Select>
       <img alt="thecollectv" className="logo" src={require('../../img/collectv.png')} />
-    </PlayerContextProvider>
+    </>
   );
 };
 
